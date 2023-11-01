@@ -1,11 +1,13 @@
 import './App.css'
+import React from 'react'
+import Login from './pages/Login/Login'
 
 function App() {
  
 
   return (
     <>
-     <p>Compass Video</p>
+     <Login/>
     </>
   )
 }
