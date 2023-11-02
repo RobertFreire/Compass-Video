@@ -1,7 +1,7 @@
 import "./VerAgora.css";
 function VerAgora() {
   return (
-    <button>
+    <button className="SeeNow">
       {" "}
       <svg
         width="24"
