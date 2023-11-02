@@ -1,7 +1,7 @@
 .home{
     display: flex;
     justify-content: center;
-    height: 982px;
+    max-height: 70vh;
     background-color: blue;
 }
 
@@ -33,7 +33,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
-    padding: 0px 80px 0px
+    padding: 0px 80px 0px;
 }
 
 .details{
@@ -41,5 +41,25 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    margin-top: 40vh;
+}
+
+.title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.description{
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 
