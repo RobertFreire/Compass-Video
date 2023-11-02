@@ -1,11 +1,12 @@
 import './App.css'
+import Home from './components/Home/Home'
 
 function App() {
  
 
   return (
     <>
-     <p>Compass Video</p>
+     <Home></Home>
     </>
   )
 }

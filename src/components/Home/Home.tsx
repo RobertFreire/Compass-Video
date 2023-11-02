@@ -1,0 +1,25 @@
+import React from 'react'
+import styles from './Home.module.css'
+
+const Home = () => {
+    return (
+        <section className={styles.home}>
+            <div className={styles.content}>
+                <div className={styles.overlay_1}>
+                    <div className={styles.overlay_2}>
+                        <div className={styles.information}>
+                            <div className={styles.details}>
+                                <h1>Five Nights at Freddy's</h1>
+                                <p>2021 • 1 h 41 min</p>
+                                <p>Drama, Sci-Fi & Fantasy</p>
+                                <p>Recently fired and desperate for work, a troubled young man named Mike agrees to take a position as a night security guard at an abandoned theme restaurant: Freddy Fazbear's Pizzeria. But he soon discovers that nothing at Freddy's is what it seems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default Home
