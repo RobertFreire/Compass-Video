@@ -3,6 +3,7 @@ import VerAgora from "../Buttons/see-now/VerAgora";
 import styles from "./Home.module.css";
 import MoreInfo from "../Buttons/MoreInfo/MoreInfo";
 import PlusBtn from "../Buttons/PlusBtn/PlusBtn";
+import FavBtn from "../Buttons/FavBtn/FavBtn";
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const Home = () => {
                 <VerAgora/>
                 <MoreInfo/>
                 <PlusBtn/>
+                <FavBtn/>
               </div>
             </div>
           </div>
