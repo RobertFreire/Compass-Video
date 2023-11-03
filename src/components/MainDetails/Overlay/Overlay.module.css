@@ -1,0 +1,11 @@
+.overlay_1{
+    width: 100%;
+    height: 882px; 
+    background: linear-gradient(180deg, rgba(26, 29, 41, 0.00) 15.81%, rgba(26, 29, 41, 0.79) 64.73%, #1A1D29 97.83%);
+}
+
+.overlay_2{
+    width: 100%;
+    height: 882px; 
+    background: linear-gradient(221deg, rgba(26, 29, 41, 0.00) 15.81%, rgba(26, 29, 41, 0.79) 64.73%, #1A1D29 97.83%);
+}
