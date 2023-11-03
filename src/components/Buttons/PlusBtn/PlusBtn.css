@@ -4,4 +4,11 @@
     height: 3rem;
     background-color: transparent;
     border: 1px solid white;
+    transition: opacity 0.5s;
+    cursor: pointer;
+}
+
+.plusBtn:hover{
+    opacity: 0.7;
+    
 }

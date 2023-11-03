@@ -11,5 +11,10 @@
   color: white;
   font-weight: 700;
   border: 1px solid white;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
 
+.moreInfo:hover{
+    opacity: 0.7;
 }

@@ -4,4 +4,10 @@
     height: 3rem;
     background-color: transparent;
     border: 1px solid white;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+
+.favBtn:hover{
+    opacity: 0.7;
 }
