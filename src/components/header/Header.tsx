@@ -36,28 +36,32 @@ const Header = () => {
 
     return (
         <header className='header'>
-            <div className="image_header">
-                <img src={logo} alt="UOL_logo" />
+            <div className='frame60'>
+                <img className="image_header" src={logo} alt="UOL_logo" />
+                <nav>
+                    <ul className='vector'>
+                        <ListItem text="Início" isLink img={house} linkTo="/pagina-inicio" />
+                        <ListItem text="Séries" isLink img={tv} linkTo="/pagina-series" />
+                        <ListItem text="Filmes" isLink img={movie} linkTo="/pagina-filmes" />
+                        <ListItem text="Celebridades" isLink img={star} linkTo="/pagina-celebridades" />
+                    </ul>
+                </nav>
             </div>
-            <ul className='vector'>
-                <ListItem text="Início" isLink img={house} linkTo="/pagina-inicio" />
-                <ListItem text="Séries" isLink img={tv} linkTo="/pagina-series" />
-                <ListItem text="Filmes" isLink img={movie} linkTo="/pagina-filmes" />
-                <ListItem text="Celebridades" isLink img={star} linkTo="/pagina-celebridades" />
-            </ul>
-            {isSearchVisible && (
-                <div className='search'>
-                    <button className='btn-modal' onClick={handleSearchModalOpen}>
-                        <img src={lupa} alt="lupa" />Buscar</button>
-                    <button className='lista-fav'>
-                        <img src={plus} alt="plus" />Minha lista</button>
-                </div>
-            )}
-            <Modal showModal={isSearchModalOpen} closeModal={handleSearchModalClose} img="caminho-para-lupa" modalType="search"/>
-            <button className='perfil' onClick={handleProfileModalOpen}>
-                <img src={perfil} alt="perfil" />
-            </button>
-            <Modal showModal={isProfileModalOpen} closeModal={handleProfileModalClose} img="caminho-para-imagem-de-perfil" modalType="profile" />
+            <div className='frame44'>
+                {isSearchVisible && (
+                    <div className='search'>
+                        <button className='btn-modal' onClick={handleSearchModalOpen}>
+                            <img src={lupa} alt="lupa" />Buscar</button>
+                        <button className='lista-fav'>
+                            <img src={plus} alt="plus" />Minha lista</button>
+                    </div>
+                )}
+                <Modal showModal={isSearchModalOpen} closeModal={handleSearchModalClose} img="caminho-para-lupa" modalType="search" />
+                <button className='perfil' onClick={handleProfileModalOpen}>
+                    <img src={perfil} alt="perfil" />
+                </button>
+                <Modal showModal={isProfileModalOpen} closeModal={handleProfileModalClose} img="caminho-para-imagem-de-perfil" modalType="profile" />
+            </div>
         </header>
     );
 };
