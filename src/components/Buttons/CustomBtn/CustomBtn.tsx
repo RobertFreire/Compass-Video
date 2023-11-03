@@ -1,8 +1,11 @@
-import './MoreInfo.css'
+import './CustomBtn.css'
 
-function MoreInfo() {
+function CustomBtn({ trailer }: { trailer?: boolean }) {
   return (
     <div>
+      {trailer ?(
+        <button className="moreInfo">TRAILER</button>)
+        : (
       <button className="moreInfo">
         <svg
           width="24"
@@ -17,9 +20,9 @@ function MoreInfo() {
           />
         </svg>
         MAIS INFORMAÇÕES
-      </button>
+      </button>)}
     </div>
   );
 }
 
-export default MoreInfo;
+export default CustomBtn;

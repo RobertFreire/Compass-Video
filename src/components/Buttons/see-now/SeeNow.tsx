@@ -1,5 +1,5 @@
-import "./VerAgora.css";
-function VerAgora() {
+import "./SeeNow.css";
+function SeeNow() {
   return (
     <button className="SeeNow">
       {" "}
@@ -20,4 +20,4 @@ function VerAgora() {
   );
 }
 
-export default VerAgora;
+export default SeeNow;
