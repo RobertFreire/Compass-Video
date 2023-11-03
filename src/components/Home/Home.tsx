@@ -2,6 +2,7 @@ import React from "react";
 import VerAgora from "../Buttons/see-now/VerAgora";
 import styles from "./Home.module.css";
 import MoreInfo from "../Buttons/MoreInfo/MoreInfo";
+import PlusBtn from "../Buttons/PlusBtn/PlusBtn";
 
 const Home = () => {
   return (
@@ -25,7 +26,7 @@ const Home = () => {
               <div className={styles.buttons}>
                 <VerAgora/>
                 <MoreInfo/>
-                <VerAgora/>
+                <PlusBtn/>
               </div>
             </div>
           </div>
