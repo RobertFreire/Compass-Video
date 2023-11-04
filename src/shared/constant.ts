@@ -3,6 +3,7 @@ const config = {
      BASE_URL: 'https://api.themoviedb.org/3',
      MAIN_URL: 'https://www.themoviedb.org/',
      MY_URL: 'http://localhost:5173/',
+     IMAGE_URL: 'https://image.tmdb.org/t/p/original'
   };
 
 
