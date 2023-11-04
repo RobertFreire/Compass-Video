@@ -1,11 +1,3 @@
-body{
-    display: flex;
-    place-items: center;
-    min-width: 320px;
-    min-height: 100vh;
-}
-
-
 .container{
     background: rgba(53, 56, 67, 0.79); 
     border-radius: 13px;
@@ -37,11 +29,16 @@ h1{
 
 
 
-body{
+.login{
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    justify-content: center;
     background-image: url('../../assets/Images/login-background.png');
 }
 
-img{
+.login img{
     size: 1000px;
 }
 
