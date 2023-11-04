@@ -16,10 +16,6 @@ const Slider = ({ title, items }: any) => {
                 <Swiper
                     slidesPerView={1.5}
                     spaceBetween={20}
-                    pagination={{
-                        el: '.custom-pagination',
-                        clickable: true,
-                      }}
                       modules={[Pagination]}
                     breakpoints={{
                         430: {

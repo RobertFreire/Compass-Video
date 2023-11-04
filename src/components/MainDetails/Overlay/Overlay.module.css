@@ -1,11 +1,20 @@
-.overlay_1{
+.overlay_1 {
     width: 100%;
-    height: 882px; 
+    height: 100%;
     background: linear-gradient(180deg, rgba(26, 29, 41, 0.00) 15.81%, rgba(26, 29, 41, 0.79) 64.73%, #1A1D29 97.83%);
 }
 
-.overlay_2{
+.overlay_2 {
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: 882px; 
+    height:100%;
     background: linear-gradient(221deg, rgba(26, 29, 41, 0.00) 15.81%, rgba(26, 29, 41, 0.79) 64.73%, #1A1D29 97.83%);
+}
+
+@media (max-width: 810px) {
+
+    .overlay_1 {
+        height: 120%;
+    }
 }
