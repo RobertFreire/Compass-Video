@@ -2,10 +2,10 @@ import './App.css'
 import React from 'react'
 import Login from './pages/Login/Login'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { UserProvider, useUser } from './Components/auth/UserContext';
 import PrivateRoute from './components/routeManage/PrivateRoute';
 import Callback from './components/auth/Callback';
 import Home from './components/Home/Home';
+import { UserProvider } from './Components/auth/UserContext';
 
 function App() {
 

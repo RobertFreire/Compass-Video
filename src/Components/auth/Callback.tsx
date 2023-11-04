@@ -1,8 +1,8 @@
 import React, { useEffect} from 'react';
 import { createSession } from './ApiAuth';
 import Loading from '../../shared/Ui/loading/Loading';
-import { useUser } from './UserContext';
 import { useNavigate } from "react-router-dom";
+import { useUser } from './UserContext';
 
 
 
@@ -37,7 +37,7 @@ const Callback = () => {
 
     useEffect(() => {
         if (authenticated) {
-            navigate("/");
+            navigate("/home");
             console.log(authenticated);
             localStorage.setItem('autenticated', JSON.stringify(authenticated));
         }

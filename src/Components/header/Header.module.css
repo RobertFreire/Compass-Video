@@ -40,7 +40,11 @@
     padding: 8px 16px;
     gap: 20px;
     list-style: none;
+    text-decoration: none
+}
 
+.vector a{
+    text-decoration: none
 }
 
 .vector img {
@@ -77,6 +81,7 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    color: white;
 }
 
 .perfil {
