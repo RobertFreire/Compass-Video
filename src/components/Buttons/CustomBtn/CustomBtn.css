@@ -1,0 +1,20 @@
+.moreInfo {
+  background-color: transparent;
+  height: 3rem;
+  padding: 0rem 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  letter-spacing: 0.14rem;
+  color: white;
+  font-weight: 700;
+  border: 1px solid white;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.moreInfo:hover{
+    opacity: 0.7;
+}
