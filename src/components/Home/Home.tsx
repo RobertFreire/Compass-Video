@@ -3,10 +3,14 @@ import styles from "./Home.module.css";
 import Details from "../MainDetails/Details/Details";
 import Overlay from "../MainDetails/Overlay/Overlay";
 import ButtonsMain from "../MainDetails/ButtonsMain/ButtonsMain";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 
 const Home = () => {
   return (
+    <>
+    <Header />
     <section className={styles.home}>
       <div className={styles.content} style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/t5zCBSB5xMDKcDqe91qahCOUYVV.jpg)`}}>
         <Overlay>
@@ -26,6 +30,8 @@ const Home = () => {
         </Overlay>
       </div>
     </section>
+    <Footer />
+    </>
   );
 };
 

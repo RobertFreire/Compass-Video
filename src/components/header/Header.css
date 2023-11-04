@@ -8,6 +8,7 @@
     color: #fff;
     background: linear-gradient(180deg, #0E1012 -50.62%, rgba(14, 16, 18, 0.00) 100%);
     font-family: 'Lato', sans-serif;
+    position: absolute;
 }
 
 .frame60 {
