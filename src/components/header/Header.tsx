@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './Header.css';
-import logo from '../img/logo_footer.png';
-import house from '../img/house.png';
-import tv from '../img/tv.png';
-import movie from '../img/movie.png';
-import star from '../img/star.png';
-import lupa from '../img/lupa.png';
-import plus from '../img/plus.png';
-import perfil from '../img/perfil.png';
+import logo from '../../assets/Images/logo_footer.png';
+import house from '../../assets/Images//house.png';
+import tv from '../../assets/Images/tv.png';
+import movie from '../../assets/Images/movie.png';
+import star from '../../assets/Images/star.png';
+import lupa from '../../assets/Images/lupa.png';
+import plus from '../../assets/Images/plus.png';
+import perfil from '../../assets/Images/perfil.png';
 import ListItem from './ListItem';
 import Modal from './Modal';
 

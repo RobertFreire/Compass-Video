@@ -1,10 +1,10 @@
 import React from 'react';
 import './Header.css';
-import lupa from '../img/lupa.png';
-import close from '../img/close.png';
-import widow from '../img/widow.png';
-import calango from '../img/calango.png';
-import add from '../img/add.png';
+import lupa from '../../assets/Images/lupa.png';
+import close from '../../assets/Images/close.png';
+import widow from '../../assets/Images/widow.png';
+import calango from '../../assets/Images/calango.png';
+import add from '../../assets/Images/add.png';
 
 interface ModalProps {
     showModal: boolean;
