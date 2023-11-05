@@ -5,6 +5,7 @@ import './Slider.css'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import config from '../../shared/constant.ts';
+import { Navigate } from 'react-router-dom';
 
 
 
@@ -35,11 +36,10 @@ const Slider = ({ title, items }: any) => {
                             spaceBetween: 20,
                         },
                     }}>
-                    <div className='custom-pagination'></div>
                     {items.results.length > 0 &&
                         items.results.map((movie: any) => (
-                            <SwiperSlide key={movie.id}>
-                                <img src={`${config.IMAGE_URL}${movie.poster_path}`} alt={movie.title} />
+                            <SwiperSlide key={movie.id} onClick={() => window.location.href = `http://localhost:5173/home?${movie.id}`}>
+                                <img src={`${config.IMAGE_URL}${movie.poster_path}`} alt={movie.title}/>
                             </SwiperSlide>
                         ))}
                         
@@ -48,5 +48,7 @@ const Slider = ({ title, items }: any) => {
         </section>
     )
 }
+
+
 
 export default Slider
