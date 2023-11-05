@@ -1,58 +1,91 @@
 import config  from "./constant";
 
-const getData = async (path: string) => {
+const fetchData = async (path: string) => {
   try {
     const response = await fetch(`${config.BASE_URL}${path}`);
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log("Error fetching movie data: ", error);
+    console.log("Error fetching data: ", error);
+    throw error;
   }
 };
+
+export const getTrending = async (mediaType: string) => {
+  const path = `/trending/${mediaType}/week?api_key=${config.API_KEY}&language=pt-BR`;
+  return fetchData(path);
+};
+
+export const getTopRated = async (mediaType: string) => {
+  const path = `/${mediaType}/top_rated?api_key=${config.API_KEY}&language=pt-BR`;
+  return fetchData(path);
+};
+
+export const getDetails = async (mediaType: string, id: string) => {
+  const path = `/${mediaType}/${id}?api_key=${config.API_KEY}&language=pt-BR`;
+  return fetchData(path);
+};
+
+export const getMoviesByGenre = async (genreId: number) => {
+  const path = `/discover/movie?api_key=${config.API_KEY}&with_genres=${genreId}`;
+  return fetchData(path);
+};
+
+export const getTVShowsByGenre = async (genreId: number) => {
+  const path = `/discover/tv?api_key=${config.API_KEY}&with_genres=${genreId}`;
+  return fetchData(path);
+};
+
+
 
 export const categories = [
   {
     name: "trending",
     title: "Em alta",
     mediaType: "movie",
-    fetchData: await getData(`/trending/all/week?api_key=${config.API_KEY}&language=pt-BR`),
+    fetchData: await getTrending("all"),
   },
   {
     name: "trendingMovie",
     title: "Filmes Em alta",
-    fetchData: await getData(`/trending/movie/week?api_key=${config.API_KEY}&language=pt-BR`,),
+    fetchData: await getTrending("movie"),
   },
   {
     name: "trendingMovie",
     title: "Series Em alta",
-    fetchData: await getData(`/trending/tv/week?api_key=${config.API_KEY}&language=pt-BR`),
+    fetchData: await getTrending('tv'),
   },
   {
     name: "topRatedMovie",
     title: "Filmes Mais bem avaliados",
-    mediaType: "movie",
-    fetchData: await getData(`/movie/top_rated?api_key=${config.API_KEY}&language=pt-BR`),
+    fetchData: await getTopRated(`movie`),
   },
   {
     name: "topRatedTv",
     title: "Series Mais bem avaliadas",
     mediaType: "tv",
-    fetchData: await getData(`/tv/top_rated?api_key=${config.API_KEY}&language=pt-BR`),
+    fetchData: await getTopRated(`tv`),
   },
   {
     name: "comedy",
-    title: "Comédias",
-    movies: await getData(`/discover/tv?api_key=${config.API_KEY}&with_genres=35`),
+    title: "Filmes de Comedia",
+    movies: await getMoviesByGenre(35),
+  },
+  {
+    name: "acao",
+    title: "Filmes de Ação",
+    movies: await getMoviesByGenre(28),
   },
   {
     name: "romances",
-    title: "Romances",
-    movies: await getData(`/discover/tv?api_key=${config.API_KEY}&with_genres=10749`),
+    title: "Filmes de Romances",
+    movies: await getMoviesByGenre(10749),
   },
   {
     name: "documentaries",
     title: "Documentários",
-    movies: await getData(`/discover/tv?api_key=${config.API_KEY}&with_genres=99`),
+    movies: await getMoviesByGenre(99),
   },
+
 ];
 
