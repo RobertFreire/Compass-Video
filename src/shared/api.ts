@@ -81,11 +81,26 @@ export const categories = [
     title: "Filmes de Romances",
     movies: await getMoviesByGenre(10749),
   },
-  {
-    name: "documentaries",
-    title: "Documentários",
+  { 
+    name: "documeries",
+    title: "Documentarios",
     movies: await getMoviesByGenre(99),
   },
+  { 
+    name: "drama",
+    title: "Drama",
+    fetchData: await getMoviesByGenre(18),
+  },
+  {
+    name: "tv-action",
+    title: "Series de Acao",
+    fetchData: await getTVShowsByGenre(10759),
+  },
+  {
+    name: "tv-comedy",
+    title: "Series de Comedia",
+    fetchData: await getTVShowsByGenre(35),
+  }
 
 ];
 
