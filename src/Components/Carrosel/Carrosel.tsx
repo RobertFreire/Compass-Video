@@ -12,12 +12,8 @@ const Carrosel = ({ title }: { title: string }) => {
         }
         Load();
     }, [])
-
     
-
     const movieCategory = movies.find((item) => item.title === title);
-
-    
 
     return (
         <section>
