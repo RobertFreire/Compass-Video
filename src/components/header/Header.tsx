@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import './Header.css';
-import logo from '../img/logo_footer.png';
-import house from '../img/house.png';
-import tv from '../img/tv.png';
-import movie from '../img/movie.png';
-import star from '../img/star.png';
-import lupa from '../img/lupa.png';
-import plus from '../img/plus.png';
-import perfil from '../img/perfil.png';
+import style from './Header.module.css';
+import logo from '../../assets/Images/logo_footer.png';
+import house from '../../assets/Images//house.png';
+import tv from '../../assets/Images/tv.png';
+import movie from '../../assets/Images/movie.png';
+import star from '../../assets/Images/star.png';
+import lupa from '../../assets/Images/lupa.png';
+import plus from '../../assets/Images/plus.png';
+import perfil from '../../assets/Images/perfil.png';
 import ListItem from './ListItem';
 import Modal from './Modal';
 
@@ -35,29 +35,29 @@ const Header = () => {
     };
 
     return (
-        <header className='header'>
-            <div className='frame60'>
-                <img className="image_header" src={logo} alt="UOL_logo" />
+        <header className={style.header}>
+            <div className={style.frame60}>
+                <img className={style.image_header} src={logo} alt="UOL_logo" />
                 <nav>
-                    <ul className='vector'>
+                    <ul className={style.vector}>
                         <ListItem text="Início" isLink img={house} linkTo="/pagina-inicio" />
-                        <ListItem text="Séries" isLink img={tv} linkTo="/pagina-series" />
-                        <ListItem text="Filmes" isLink img={movie} linkTo="/pagina-filmes" />
+                        <ListItem text="Séries" isLink img={tv} linkTo="/tv" />
+                        <ListItem text="Filmes" isLink img={movie} linkTo="/movies" />
                         <ListItem text="Celebridades" isLink img={star} linkTo="/pagina-celebridades" />
                     </ul>
                 </nav>
             </div>
-            <div className='frame44'>
+            <div className={style.frame44}>
                 {isSearchVisible && (
-                    <div className='search'>
-                        <button className='btn-modal' onClick={handleSearchModalOpen}>
+                    <div className={style.search}>
+                        <button className={style['btn-modal']} onClick={handleSearchModalOpen}>
                             <img src={lupa} alt="lupa" />Buscar</button>
-                        <button className='lista-fav'>
+                        <button className={style['lista-fav']}>
                             <img src={plus} alt="plus" />Minha lista</button>
                     </div>
                 )}
                 <Modal showModal={isSearchModalOpen} closeModal={handleSearchModalClose} img="caminho-para-lupa" modalType="search" />
-                <button className='perfil' onClick={handleProfileModalOpen}>
+                <button className={style.perfil} onClick={handleProfileModalOpen}>
                     <img src={perfil} alt="perfil" />
                 </button>
                 <Modal showModal={isProfileModalOpen} closeModal={handleProfileModalClose} img="caminho-para-imagem-de-perfil" modalType="profile" />
