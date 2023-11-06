@@ -1,4 +1,4 @@
-import './BlueButton.css'
+import styles  from './BlueButton.module.css'
 
 interface BlueButtonProps{
     content: string;
@@ -7,8 +7,8 @@ interface BlueButtonProps{
 
 function BlueButton(props:BlueButtonProps) {
   return (
-    <div className='atributes'>
-      <button onClick={props.onClick}>{props.content}</button>
+    <div className={styles.atributes}>
+      <button className={styles.buttonBlue} onClick={props.onClick}>{props.content}</button>
     </div>
   );
 }

@@ -6,6 +6,7 @@
     height: auto;
     min-width: 45vw;
     backdrop-filter: blur(8px);
+    text-align: center;
 }
 .content h1, p, h5{
     margin: 15px;

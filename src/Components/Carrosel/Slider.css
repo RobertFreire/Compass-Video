@@ -1,8 +1,11 @@
 .slider{
   width: 100%;
+  padding: 20px 0px 20px 20px;
+  background-color: rgba(26, 29, 41, 1);
 }
 
 .slider h2{
+  color: white;
   margin-bottom: 20px;
   text-align: start;
 }
@@ -19,4 +22,10 @@
 
 .swiper-slide img:hover {
   transform: scale(1.1);
+}
+
+.title-name{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
 }

@@ -1,0 +1,21 @@
+.SeeNow {
+  background: var(--secondary-100, #fff);
+  height: 3rem;
+  padding: 0rem 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  letter-spacing: 0.14rem;
+  color: #1A1D29;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.5s;
+}
+
+.SeeNow:hover{
+  opacity: 0.7;
+}
