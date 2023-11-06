@@ -41,8 +41,8 @@ const Header = () => {
                 <nav>
                     <ul className={style.vector}>
                         <ListItem text="Início" isLink img={house} linkTo="/pagina-inicio" />
-                        <ListItem text="Séries" isLink img={tv} linkTo="/pagina-series" />
-                        <ListItem text="Filmes" isLink img={movie} linkTo="/pagina-filmes" />
+                        <ListItem text="Séries" isLink img={tv} linkTo="/tv" />
+                        <ListItem text="Filmes" isLink img={movie} linkTo="/movies" />
                         <ListItem text="Celebridades" isLink img={star} linkTo="/pagina-celebridades" />
                     </ul>
                 </nav>
