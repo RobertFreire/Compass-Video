@@ -1,5 +1,5 @@
-import './App.css'
-import React from 'react'
+import "./App.css";
+/* import React from 'react'
 import Login from './pages/Login/Login'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PrivateRoute from './components/routeManage/PrivateRoute';
@@ -7,13 +7,12 @@ import Home from './components/Home/Home';
 import { UserProvider } from './Components/Auth/UserContext';
 import Callback from './components/Auth/Callback';
 import Movies from './pages/Movies/Movies';
-import Tv from './pages/Tv/Tv';
+import Tv from './pages/Tv/Tv'; */
+import EpisodeList from "./components/EpisodeList/EpisodeList";
 function App() {
-
-
   return (
     <>
-        <Router>
+      {/*         <Router>
           <UserProvider>
           <Routes>
           <Route element={<PrivateRoute />}>
@@ -25,9 +24,15 @@ function App() {
             <Route path="/tv" element={<Tv/>}/>
           </Routes>
           </UserProvider>
-        </Router>
+        </Router> */}
+      <EpisodeList
+        name="teste"
+        duration="10m"
+        description="ssssssssssssssssss"
+      />
+      
     </>
-  )
+  );
 }
 
-export default App
+export default App;
