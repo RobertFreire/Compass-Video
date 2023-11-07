@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import style from './Header.module.css';
 import logo from '../../assets/Images/logo_footer.png';
-import house from '../../assets/Images//house.png';
+import house from '../../assets/Images/house.png';
 import tv from '../../assets/Images/tv.png';
 import movie from '../../assets/Images/movie.png';
 import star from '../../assets/Images/star.png';
@@ -9,7 +9,9 @@ import lupa from '../../assets/Images/lupa.png';
 import plus from '../../assets/Images/plus.png';
 import perfil from '../../assets/Images/perfil.png';
 import ListItem from './ListItem';
-import Modal from './Modal';
+import SearchModal from './ModalSearch';
+import ProfileModal from './ProfileModal';
+
 
 const Header = () => {
     const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
@@ -40,10 +42,42 @@ const Header = () => {
                 <img className={style.image_header} src={logo} alt="UOL_logo" />
                 <nav>
                     <ul className={style.vector}>
-                        <ListItem text="Início" isLink img={house} linkTo="/home" />
-                        <ListItem text="Séries" isLink img={tv} linkTo="/tv" />
-                        <ListItem text="Filmes" isLink img={movie} linkTo="/movie" />
-                        <ListItem text="Celebridades" isLink img={star} linkTo="/actors" />
+                        <ListItem
+                            text="Início"
+                            isLink
+                            img={house}
+                            linkTo="/home"
+                            style={{
+                                filter: location.pathname === '/home' ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
+                            }}
+                        />
+                        <ListItem
+                            text="Séries"
+                            isLink
+                            img={tv}
+                            linkTo="/tv"
+                            style={{
+                                filter: location.pathname === '/tv' ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
+                            }}
+                        />
+                        <ListItem
+                            text="Filmes"
+                            isLink
+                            img={movie}
+                            linkTo="/home"
+                            style={{
+                                filter: location.pathname === '/movies' ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
+                            }}
+                        />
+                        <ListItem
+                            text="Celebridades"
+                            isLink
+                            img={star}
+                            linkTo="/actors"
+                            style={{
+                                filter: location.pathname === '/actors' ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
+                            }}
+                        />
                     </ul>
                 </nav>
             </div>
@@ -51,16 +85,18 @@ const Header = () => {
                 {isSearchVisible && (
                     <div className={style.search}>
                         <button className={style['btn-modal']} onClick={handleSearchModalOpen}>
-                            <img src={lupa} alt="lupa" />Buscar</button>
+                            <img src={lupa} alt="lupa" />Buscar
+                        </button>
                         <button className={style['lista-fav']}>
-                            <img src={plus} alt="plus" />Minha lista</button>
+                            <img src={plus} alt="plus" />Minha lista
+                        </button>
                     </div>
                 )}
-                <Modal showModal={isSearchModalOpen} closeModal={handleSearchModalClose} img="caminho-para-lupa" modalType="search" />
+                <SearchModal showModal={isSearchModalOpen} closeModal={handleSearchModalClose} />
                 <button className={style.perfil} onClick={handleProfileModalOpen}>
                     <img src={perfil} alt="perfil" />
                 </button>
-                <Modal showModal={isProfileModalOpen} closeModal={handleProfileModalClose} img="caminho-para-imagem-de-perfil" modalType="profile" />
+                <ProfileModal showModal={isProfileModalOpen} closeModal={handleProfileModalClose} />
             </div>
         </header>
     );
