@@ -36,28 +36,36 @@ export const getTVShowsByGenre = async (genreId: number) => {
   return fetchData(path);
 };
 
+export const getSimilar = async (mediaType: string, id: string) => {
+  const path = `/${mediaType}/${id}/similar?api_key=${config.API_KEY}&language=pt-BR`;
+  return fetchData(path);
+};
+
 
 
 export const categories = [
   {
     name: "trending",
     title: "Em alta",
-    mediaType: "movie",
+    mediaType: "home",
     fetchData: await getTrending("all"),
   },
   {
     name: "trendingMovie",
     title: "Filmes Em alta",
+    mediaType: "movie",
     fetchData: await getTrending("movie"),
   },
   {
     name: "trendingMovie",
     title: "Series Em alta",
+    mediaType: "tv",
     fetchData: await getTrending('tv'),
   },
   {
     name: "topRatedMovie",
     title: "Filmes Mais bem avaliados",
+    mediaType: "movie",
     fetchData: await getTopRated(`movie`),
   },
   {
@@ -69,38 +77,45 @@ export const categories = [
   {
     name: "comedy",
     title: "Filmes de Comedia",
-    movies: await getMoviesByGenre(35),
+    mediaType: "movie",
+    fetchData: await getMoviesByGenre(35),
   },
   {
     name: "acao",
     title: "Filmes de Ação",
-    movies: await getMoviesByGenre(28),
+    mediaType: "movie",
+    fetchData: await getMoviesByGenre(28),
   },
   {
     name: "romances",
     title: "Filmes de Romances",
-    movies: await getMoviesByGenre(10749),
+    mediaType: "movie",
+    fetchData: await getMoviesByGenre(10749),
   },
   { 
     name: "documeries",
     title: "Documentarios",
-    movies: await getMoviesByGenre(99),
+    mediaType: "movie",
+    fetchData: await getMoviesByGenre(99),
   },
   { 
     name: "drama",
     title: "Drama",
+    mediaType: "movie",
     fetchData: await getMoviesByGenre(18),
   },
   {
     name: "tv-action",
     title: "Series de Acao",
+    mediaType: "tv",
     fetchData: await getTVShowsByGenre(10759),
   },
   {
     name: "tv-comedy",
     title: "Series de Comedia",
+    mediaType: "tv",
     fetchData: await getTVShowsByGenre(35),
-  }
+  },
 
 ];
 
