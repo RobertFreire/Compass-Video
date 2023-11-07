@@ -8,7 +8,7 @@ import { UserProvider } from './Components/Auth/UserContext';
 import Callback from './components/Auth/Callback';
 import Movies from './pages/Movies/Movies';
 import Tv from './pages/Tv/Tv'; */
-import EpisodeList from "./components/EpisodeList/EpisodeList";
+import SeriesPage from "./components/EpisodeList/SeriesPage";
 function App() {
   return (
     <>
@@ -25,11 +25,7 @@ function App() {
           </Routes>
           </UserProvider>
         </Router> */}
-      <EpisodeList
-        name="teste"
-        duration="10m"
-        description="ssssssssssssssssss"
-      />
+        <SeriesPage seriesId={84958} seasonNumber={1}/>
       
     </>
   );
