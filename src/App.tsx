@@ -10,29 +10,31 @@ import Movies from './pages/Movies/Movies';
 import Tv from './pages/Tv/Tv';
 import MovieId from './pages/Movies/MoviesId/MovieId';
 import TvId from './pages/Tv/TvId/TvId';
+import TvSeason from './pages/Tv/TvId/TvSeason/TvSeason';
 function App() {
+
+
   return (
     <>
-      <Router>
-        <UserProvider>
+        <Router>
+          <UserProvider>
           <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="" element={<Navigate to="/home" />} />
           <Route element={<PrivateRoute />}>
                 <Route element={<Home/>} path="/home" />
                 <Route element={<Movies/>} path="/movie" />
                 <Route element={<MovieId/>} path="/movie/:id" />
                 <Route element={<Tv/>} path="/tv" />
                 <Route element={<TvId/>} path="/tv/:id" />
+                <Route element={<TvSeason/>} path="/tv/:id/:season_number" />
             </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/callback" element={<Callback />} />
-            <Route path="/movies" element={<Movies />} />
-            <Route path="/tv" element={<Tv />} />
           </Routes>
-        </UserProvider>
-      </Router>
+          </UserProvider>
+        </Router>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

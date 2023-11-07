@@ -13,8 +13,8 @@ import { getDetails } from '../../shared/api.ts';
 const Slider = ({ category, similar, location }: { category: any, similar?: boolean, location?:string }) => {
 
     const navigate = useNavigate();
-
     const navigateLocation = ({ type, id }: any) => {
+
         if (type == undefined) {
             type = category.mediaType
             navigate(`/${type}/${id}`);
@@ -25,6 +25,7 @@ const Slider = ({ category, similar, location }: { category: any, similar?: bool
 
     return (
         <section className='slider'>
+           
             <div className='Movie-list'>
                 <Swiper
                     slidesPerView={1.5}

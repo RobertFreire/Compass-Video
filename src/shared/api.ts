@@ -41,16 +41,15 @@ export const getSimilar = async (mediaType: string, id: string) => {
   return fetchData(path);
 };
 
-export const getSeasonEpisodes = async (seriesId:number, seasonNumber:number) => {
-   const path = `/tv/${seriesId}/season/${seasonNumber}?api_key=${config.API_KEY}&language=pt-BR`;
-   return fetchData(path);
-}
+export const getSeason = async (tvId: string, seasonNumber: string) => {
+  const path = `/tv/${tvId}/season/${seasonNumber}?api_key=${config.API_KEY}&language=en-US`;
+  return fetchData(path);
+};
 
- export const getAllEpisodesForSeries = async (seriesId: number) => {
-    const path = `/tv/${seriesId}?api_key=${config.API_KEY}&append_to_response=seasons&language=pt-BR`;  
-    return fetchData(path);
-  };
-
+export const getAllEpisodesForSeries = async (seriesId: number) => {
+  const path = `/tv/${seriesId}?api_key=${config.API_KEY}&append_to_response=seasons&language=pt-BR`;  
+  return fetchData(path);
+};
 
 
 export const categories = [
