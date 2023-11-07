@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
-import Modal from './Modal';
+import React from 'react';
+
 
 interface ListItemProps {
     text: string;
     isLink: boolean;
     linkTo?: string;
     img: string;
-    handleModalOpen?: () => void;
+    style ?: any;
+    handleSearchModalOpen?: () => void;
+    handleProfileModalOpen?: () => void;
 }
 
-
-const ListItem: React.FC<ListItemProps> = ({ text, isLink, linkTo, img, handleModalOpen }) => {
+const ListItem: React.FC<ListItemProps> = ({ text, isLink, linkTo, img, style, handleSearchModalOpen, handleProfileModalOpen }) => {
     return (
-        <li>
+        <li style={style}>
             {isLink ? (
-                <a href={linkTo}><img src={img} alt={text} />{text}</a>
+                <a href={linkTo}><img src={img} alt={text} />{text}</a> 
             ) : (
-                <button onClick={handleModalOpen}>{text}</button>
+                <button onClick={text === 'Buscar' ? handleSearchModalOpen : handleProfileModalOpen}>
+                    {text}
+                </button>
             )}
         </li>
     );
