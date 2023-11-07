@@ -40,10 +40,10 @@ const Header = () => {
                 <img className={style.image_header} src={logo} alt="UOL_logo" />
                 <nav>
                     <ul className={style.vector}>
-                        <ListItem text="Início" isLink img={house} linkTo="/pagina-inicio" />
-                        <ListItem text="Séries" isLink img={tv} linkTo="/pagina-series" />
-                        <ListItem text="Filmes" isLink img={movie} linkTo="/pagina-filmes" />
-                        <ListItem text="Celebridades" isLink img={star} linkTo="/pagina-celebridades" />
+                        <ListItem text="Início" isLink img={house} linkTo="/home" />
+                        <ListItem text="Séries" isLink img={tv} linkTo="/tv" />
+                        <ListItem text="Filmes" isLink img={movie} linkTo="/movie" />
+                        <ListItem text="Celebridades" isLink img={star} linkTo="/actors" />
                     </ul>
                 </nav>
             </div>

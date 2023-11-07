@@ -17,7 +17,9 @@
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.875rem;
+    color: white;
 }
+
 
 @media (max-width: 810px) {
     .details{

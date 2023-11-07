@@ -1,0 +1,61 @@
+  .item {
+    background-color: rgba(255, 255, 255, 0.10);
+    border-radius: 0.5rem;
+    width: 39.3rem;
+    height: 8rem;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .text {
+    font-family: 'Work Sans', sans-serif;
+    margin: 1.5rem;
+    min-width: 22rem;
+  }
+  
+  .text p {
+    font-size: 0.875rem;
+    margin: 0;
+    line-height: 150%;
+    font-weight: 400;
+  }
+  
+  .text h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+.text h6{
+    font-size: 0.875rem;
+}
+  
+  .imagem {
+    width: 221px;
+    height: 128px;
+    border-radius: 8px;
+  }
+  
+   .title_area {
+    display: flex;
+    justify-content: space-between;
+  } 
+  
+
+  @media (max-width: 810px) {
+
+    .item{
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+    }
+
+    .text{
+      min-width: 100%;
+    }
+
+    .imagem{
+      width: 100%;
+    }
+
+  }
