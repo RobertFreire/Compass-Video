@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import EpisodeList from "./EpisodeList";
 import { getSeasonEpisodes } from "../../shared/api";
+import style from './SeriesPage.module.css'
 
 interface EpisodeFromAPI {
   id?: number;
@@ -29,7 +30,7 @@ const SeriesPage: React.FC<SeriesPageProps> = ({ seriesId, seasonNumber }) => {
   useEffect(() => {
     getSeasonEpisodes(seriesId, seasonNumber)
       .then((data) => {
-        const baseURL = "https://image.tmdb.org/t/p/original"; // This is an example base URL
+        const baseURL = "https://image.tmdb.org/t/p/original"; 
 
         const allEpisodes = data.episodes.map((episode: EpisodeFromAPI) => ({
           id: episode.id,
@@ -48,9 +49,9 @@ const SeriesPage: React.FC<SeriesPageProps> = ({ seriesId, seasonNumber }) => {
   }, [seriesId, seasonNumber]);
 
   return (
-    <div>
+    <div className={style.container}>
       {episodes.map((episode) => (
-        <EpisodeList
+        <EpisodeList 
           key={episode.id || episode.name}
           name={episode.name}
           duration={episode.duration}
