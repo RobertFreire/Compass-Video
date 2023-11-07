@@ -82,22 +82,22 @@
     {
       name: "comedy",
       title: "Filmes de Comedia",
-      movies: await getMoviesByGenre(35),
+      fetchData: await getMoviesByGenre(35),
     },
     {
       name: "acao",
       title: "Filmes de Ação",
-      movies: await getMoviesByGenre(28),
+      fetchData: await getMoviesByGenre(28),
     },
     {
       name: "romances",
       title: "Filmes de Romances",
-      movies: await getMoviesByGenre(10749),
+      fetchData: await getMoviesByGenre(10749),
     },
     { 
       name: "documeries",
       title: "Documentarios",
-      movies: await getMoviesByGenre(99),
+      fetchData: await getMoviesByGenre(99),
     },
     { 
       name: "drama",

@@ -25,7 +25,7 @@ function App() {
           </Routes>
           </UserProvider>
         </Router> */}
-        <SeriesPage seriesId={84958} seasonNumber={1}/>
+        <SeriesPage seriesId={1434} seasonNumber={3}/>
       
     </>
   );
