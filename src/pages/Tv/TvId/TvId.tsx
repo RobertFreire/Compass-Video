@@ -5,6 +5,7 @@ import Header from '../../../components/header/Header';
 import MovieInfo from '../../../components/MovieInfo/MovieInfo';
 import Carrosel from '../../../components/Carrosel/Carrosel';
 import { Season, TVSeries, parseTVSeries } from '../../../shared/information';
+import Footer from '../../../components/footer/Footer';
 
 const TvId = () => {
 
@@ -37,14 +38,15 @@ const TvId = () => {
 
     console.log(details);
 
-
+    
     if (details) {
     return (
         <div>
             <Header />
             <MovieInfo location="tv" MediaId={id} />
-            <Carrosel title='Temporadas' items={details!.seasons} />
+            <Carrosel title='Temporadas' items={details.seasons} />
             <Carrosel title='Series Similares' items={similarMovies} location='tv' />
+            <Footer />
         </div>
     )
 }
