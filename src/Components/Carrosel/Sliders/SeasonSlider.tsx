@@ -12,8 +12,8 @@ const SeasonSlider = ({ seasons }: { seasons: Season[] }) => {
 
     const navigate = useNavigate();
 
-    const navigateToSeason = (season_id : string) => {
-        navigate(`/tv/${season_id}`);
+    const navigateToSeason = (season_id : number, season_number:number) => {
+        navigate(`/tv/${season_id}/${season_number}`);
     }
 
     return (
@@ -42,7 +42,7 @@ const SeasonSlider = ({ seasons }: { seasons: Season[] }) => {
                         },
                     }}>
                     {seasons.map((season: any) => (
-                        <SwiperSlide key={season.season_number} onClick={() => navigateToSeason(season.id)}>
+                        <SwiperSlide key={season.season_number} onClick={() => navigateToSeason(season.id_tv, season.season_number)}>
                             <img src={`${config.IMAGE_URL}${season.poster_path}`} alt={season.name} />
                         </SwiperSlide>
                     ))}
