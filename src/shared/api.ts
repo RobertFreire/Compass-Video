@@ -41,6 +41,16 @@ export const getSimilar = async (mediaType: string, id: string) => {
   return fetchData(path);
 };
 
+export const getSeasonEpisodes = async (seriesId:number, seasonNumber:number) => {
+   const path = `/tv/${seriesId}/season/${seasonNumber}?api_key=${config.API_KEY}&language=pt-BR`;
+   return fetchData(path);
+}
+
+ export const getAllEpisodesForSeries = async (seriesId: number) => {
+    const path = `/tv/${seriesId}?api_key=${config.API_KEY}&append_to_response=seasons&language=pt-BR`;  
+    return fetchData(path);
+  };
+
 
 
 export const categories = [
@@ -116,6 +126,5 @@ export const categories = [
     mediaType: "tv",
     fetchData: await getTVShowsByGenre(35),
   },
-
 ];
 
