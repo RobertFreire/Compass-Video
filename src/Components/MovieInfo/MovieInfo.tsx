@@ -34,7 +34,7 @@ const MovieInfo = memo(({ location, MediaId }: { location: string; MediaId?: str
       if (idMovie) {
         const details = await getDetails(location, idMovie);
         if (location === 'movie') {
-          setDetails(parseMovie(details));
+          setDetails(() => parseMovie(details));
         } else {
           setDetails(parseTVSeries(details));
         }
@@ -48,6 +48,7 @@ const MovieInfo = memo(({ location, MediaId }: { location: string; MediaId?: str
   useEffect(() => {
     Load();
   }, []);
+
   
   useEffect(() => {
     locationPath();
@@ -57,7 +58,6 @@ const MovieInfo = memo(({ location, MediaId }: { location: string; MediaId?: str
     fetchDetails();
   }, [idMovie]);
 
-  console.log(details)
 
   if (details) {
   return (

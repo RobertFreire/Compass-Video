@@ -1,5 +1,5 @@
 import Details from "../MainDetails/Details/Details";
-import { Movie, TVSeries } from "../../shared/information";
+import { Movie, Season, TVSeries } from "../../shared/information";
 
 function formatYearFromDate(date: string) {
     const year = new Date(date).getFullYear();
@@ -40,3 +40,17 @@ export const TVSeriesDetails = ({ tvSeries }: { tvSeries: TVSeries }) => {
         </>
     );
 };
+
+export const SeasonDetails = ({ season }: {season: Season}) => {
+    return (
+      <>
+        <Details
+                title={season.name}
+                year={formatYearFromDate(season.air_date)}
+                duration={`${season.vote_average}`}
+                genre={''}
+
+            />
+      </>
+    );
+  };
