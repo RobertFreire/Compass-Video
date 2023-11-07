@@ -31,6 +31,7 @@ export function parseMovie(data: any): Movie {
 
 export interface TVSeries {
   name: string;
+  id: number;
   original_name: string;
   overview: string;
   first_air_date: string;
@@ -52,6 +53,7 @@ export interface Season {
   air_date: string;
   poster_path: string;
   overview: string;
+  episodes: Episode[] 
 }
 
 export interface Episode {
@@ -59,7 +61,7 @@ export interface Episode {
   name: string;
   overview: string;
   still_path: string;
-  air_date: string;
+  runtime: string;
 }
 
 export interface Genre {
@@ -67,9 +69,30 @@ export interface Genre {
   name: string;
 }
 
+export function parseSeason(data: any): Season{
+  return {
+    season_id: 15,
+    name: data.name,
+    vote_average: data.vote_average,
+    season_number: data.season_number,
+    episode_count: data.episode_count,
+    air_date: data.air_date,
+    poster_path: data.poster_path,
+    overview: data.overview,
+    episodes: data.episodes.map((episodes: any) => ({
+      episode_number: episodes.episode_number,
+      name: episodes.name,
+      overview: episodes.overview,
+      still_path: episodes.still_path,
+      runtime: episodes.runtime
+    })),
+  };
+}
+
 export function parseTVSeries(data: any): TVSeries {
   return {
     name: data.name,
+    id: data.id,
     original_name: data.original_name,
     overview: data.overview,
     first_air_date: data.first_air_date,
@@ -83,6 +106,10 @@ export function parseTVSeries(data: any): TVSeries {
     number_of_seasons: data.number_of_seasons,
     number_of_episodes: data.number_of_episodes,
     seasons: data.seasons.map((season: any) => ({
+      id_tv: data.id,
+      season_id: season.id,
+      name: season.name,
+      vote_average: season.vote_average,
       season_number: season.season_number,
       episode_count: season.episode_count,
       air_date: season.air_date,
