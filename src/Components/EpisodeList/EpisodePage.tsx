@@ -6,6 +6,7 @@ interface EpisodeData {
   name: string;
   duration: string;
   description: string;
+  episode_number: string
 }
 
 interface SeriesPageProps {
@@ -30,6 +31,7 @@ const SeriesPage: React.FC<SeriesPageProps> = ({ seriesId }) => {
     <div>
       {episodes.map((episode, index) => (
         <EpisodeList
+          number={episode.episode_number}
           key={index}
           name={episode.name}
           duration={episode.duration}

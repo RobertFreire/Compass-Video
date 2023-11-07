@@ -1,11 +1,11 @@
   .item {
-    background-color: rgba(26, 29, 41, 0.5);
+    background-color: rgba(255, 255, 255, 0.10);
     border-radius: 0.5rem;
+    width: 39.3rem;
+    height: 8rem;
     color: white;
     display: flex;
     align-items: center;
-    height: 7rem;
-    width: 32rem;
   }
   
   .text {
@@ -16,6 +16,9 @@
   
   .text p {
     font-size: 0.875rem;
+    margin: 0;
+    line-height: 150%;
+    font-weight: 400;
   }
   
   .text h3 {
@@ -28,8 +31,8 @@
 }
   
   .imagem {
-    width: 120px;
-    height: 110px;
+    width: 221px;
+    height: 128px;
     border-radius: 8px;
   }
   
@@ -38,3 +41,21 @@
     justify-content: space-between;
   } 
   
+
+  @media (max-width: 810px) {
+
+    .item{
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+    }
+
+    .text{
+      min-width: 100%;
+    }
+
+    .imagem{
+      width: 100%;
+    }
+
+  }
