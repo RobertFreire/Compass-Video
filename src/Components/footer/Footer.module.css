@@ -8,13 +8,15 @@
     align-items: center;
     font-family: 'Lato', sans-serif;
     color: #FFF;
+    text-align: center;
 }
 
 .image_footer {
     width: 200px;
     height: 68.456px;
     flex-shrink: 0;
-    padding: 34px;
+    padding-top: 30px;
+    align-items: center;
 }
 
 .frame6 {
@@ -23,26 +25,34 @@
     justify-content: center;
     gap: 20px;
     padding: 10px;
+    padding-top: 50px;
+    align-items: center;
 }
 
 .frame6 p {
     text-align: center;
+    align-items: center;
     font-size: 12px;
     font-style: normal;
     line-height: 18px;
+    font-family: 'Lato', sans-serif;
 }
 
 .frame7 {
-
     text-align: center;
     font-size: 12px;
     font-style: normal;
     line-height: 18px;
+    align-items: center;
 }
 
 .frame7 p {
+    text-align: center;
+    align-items: center;
     max-width: 443px;
     padding-top: 20px;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -70,6 +80,9 @@
     }
 
     .frame7 {
+        display: flex;
         width: 100%;
+        flex-direction: column;
+
     }
 }
