@@ -19,6 +19,7 @@
     line-height: 1.875rem;
 }
 
+
 @media (max-width: 810px) {
     .details{
         max-width: 100%;
