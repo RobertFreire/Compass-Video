@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import Header from '../../../components/header/Header';
+import Header from '../../../components/Header/Header';
 import MovieInfo from '../../../components/MovieInfo/MovieInfo';
 import Footer from '../../../components/footer/Footer';
 import { getSimilar } from '../../../shared/api';

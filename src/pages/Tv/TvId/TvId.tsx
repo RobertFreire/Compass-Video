@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { getDetails, getSimilar } from '../../../shared/api';
-import Header from '../../../components/header/Header';
+import Header from '../../../components/Header/Header';
 import MovieInfo from '../../../components/MovieInfo/MovieInfo';
 import Carrosel from '../../../components/Carrosel/Carrosel';
 import { Season, TVSeries, parseTVSeries } from '../../../shared/information';

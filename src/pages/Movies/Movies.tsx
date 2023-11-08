@@ -1,6 +1,6 @@
 import MovieInfo from "../../components/MovieInfo/MovieInfo";
 import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
+import Header from "../../components/Header/Header";
 import Carrosel from "../../components/Carrosel/Carrosel";
 import React from "react";
 

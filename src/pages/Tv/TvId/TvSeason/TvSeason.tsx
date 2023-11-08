@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { getSeason } from '../../../../shared/api';
 import Footer from '../../../../components/footer/Footer';
-import Header from '../../../../components/header/Header';
+import Header from '../../../../components/Header/Header';
 import MovieInfo from '../../../../components/MovieInfo/MovieInfo';
 import SeasonInfo from '../../../../components/MovieInfo/SeasonInfo';
 import { Season, parseSeason } from '../../../../shared/information';
