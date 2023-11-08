@@ -69,6 +69,96 @@ export interface Genre {
   name: string;
 }
 
+export interface Actor {
+  id: number;
+  name: string;
+  original_name: string;
+  media_type: string;
+  popularity: number;
+  gender: number;
+  known_for_department: string;
+  profile_path: string;
+  known_for: Media[];
+}
+
+export interface Media {
+  adult: boolean;
+  backdrop_path: string;
+  id: string;
+  title: string;
+  original_language: string;
+  original_title: string;
+  overview: string;
+  poster_path: string;
+  media_type: string;
+}
+
+export interface Collection {
+  id: number;
+  name: string;
+  overview: string;
+  backdrop_path: string;
+  poster_path: string;
+  parts: CollectionPart[];
+}
+
+export interface CollectionPart {
+  id: number;
+  title: string;
+  overview: string;
+  poster_path: string;
+  media_type: string;
+}
+
+export function parseCollection(data: any): Collection {
+  return {
+    id: data.id,
+    name: data.name,
+    overview: data.overview,
+    backdrop_path: data.backdrop_path,
+    poster_path: data.poster_path,
+    parts: data.parts.map((part: any) => ({
+      id: part.id,
+      title: part.title,
+      overview: part.overview,
+      poster_path: part.poster_path,
+      media_type: part.media_type,
+    })),
+  };
+}
+
+export interface SearchResult {
+  adult: boolean;
+  backdrop_path: string | null;
+  id: number;
+  name: string;
+  original_language: string;
+}
+
+export function parseActor(data: any): Actor {
+  return {
+    id: data.id,
+    name: data.name,
+    original_name: data.original_name,
+    media_type: data.media_type,
+    popularity: data.popularity,
+    gender: data.gender,
+    known_for_department: data.known_for_department,
+    profile_path: data.profile_path,
+    known_for: data.known_for.map((media: any) => ({
+      adult: media.adult,
+      backdrop_path: media.backdrop_path,
+      id: media.id,
+      title: media.title,
+      original_language: media.original_language,
+      original_title: media.original_title,
+      overview: media.overview,
+      poster_path: media.poster_path,
+      media_type: media.media_type,
+    })),
+  };
+}
+
 export function parseSeason(data: any): Season{
   return {
     season_id: 15,

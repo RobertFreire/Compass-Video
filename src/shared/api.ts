@@ -51,8 +51,27 @@ export const getAllEpisodesForSeries = async (seriesId: number) => {
   return fetchData(path);
 };
 
+export const getActors = async () => {
+  const path = `/trending/person/week?api_key=${config.API_KEY}&language=pt-BR`;
+  return fetchData(path);
+}
 
-export const categories = [
+export const getMediaCredits = async (person_id: string | number) => {
+  const path = `/person/${person_id}/combined_credits?api_key=${config.API_KEY}&language=pt-BR`;
+  return fetchData(path);
+}
+
+export const getSearch = async (type: string, query: string) => {
+  const path = `/search/${type}?query=${query}&api_key=${config.API_KEY}&language=pt-BR`
+  return fetchData(path);
+}
+
+export const getColletions = async (collection_id: string | number) => {
+  const path = `//collection/1241?&api_key=${config.API_KEY}&language=pt-BR`
+  return fetchData(path);
+}
+
+export  const  categories =  [
   {
     name: "trending",
     title: "Em alta",
