@@ -42,6 +42,7 @@ const Player = () => {
                 <img src={back} alt='Voltar' />
                 <div className={style['back-text']}>
                 <h1>{details && 'title' in details && details.title}</h1>
+                <h1>{details && 'name' in details && details.name}</h1>
                     <p>{details && 'seasons' in details ? 'Season 1' : ''}</p>
                 </div>
             </button>
