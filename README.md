@@ -1,27 +1,20 @@
-# React + TypeScript + Vite
+# Compass Video Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- This project is a web application that shows movies and tv series and their most important information using the TMDB API (like a streaming service!).
+- The project was developed as a challenge during the Compass internship.
+--   
+## Dependencies
+- NodeJs ^18.17.0
+- React ^18.2.0
+- swiper ^11.0.3
 
-Currently, two official plugins are available:
+## How to run:
+```npm install```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Developers
 
-## Expanding the ESLint configuration
+Emanuel Reino   - [@Emanuel-Al](https://github.com/Emanuel-Al)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Fabio Medeiros  - [@FabioGMedeiros](https://github.com/FabioGMedeiros)
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Robert Freire - [@RobertFreire](https://github.com/RobertFreire)
