@@ -8,15 +8,19 @@ import star from '../../assets/Images/star.png';
 import lupa from '../../assets/Images/lupa.png';
 import plus from '../../assets/Images/plus.png';
 import perfil from '../../assets/Images/perfil.png';
+import { useLocation } from 'react-router-dom';
 import ListItem from './ListItem';
 import SearchModal from './ModalSearch';
 import ProfileModal from './ProfileModal';
 
 
 const Header = () => {
+    const location = useLocation();
     const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
     const [isSearchVisible, setIsSearchVisible] = useState(true);
     const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+
+    console.log(location);
 
     const handleSearchModalOpen = () => {
         setIsSearchModalOpen(true);
@@ -48,7 +52,7 @@ const Header = () => {
                             img={house}
                             linkTo="/home"
                             style={{
-                                filter: location.pathname === '/home' ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
+                                filter: location.pathname.startsWith('/home') ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
                             }}
                         />
                         <ListItem
@@ -57,16 +61,16 @@ const Header = () => {
                             img={tv}
                             linkTo="/tv"
                             style={{
-                                filter: location.pathname === '/tv' ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
+                                filter: location.pathname.startsWith('/tv')  ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
                             }}
                         />
                         <ListItem
                             text="Filmes"
                             isLink
                             img={movie}
-                            linkTo="/home"
+                            linkTo="/movie"
                             style={{
-                                filter: location.pathname === '/movies' ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
+                                filter: location.pathname.startsWith('/movie') ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
                             }}
                         />
                         <ListItem
@@ -75,7 +79,7 @@ const Header = () => {
                             img={star}
                             linkTo="/actors"
                             style={{
-                                filter: location.pathname === '/actors' ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
+                                filter: location.pathname.startsWith('/actors') ? 'invert(12%) sepia(96%) saturate(1899%) hue-rotate(129deg) brightness(97%) contrast(104%)' : 'none'
                             }}
                         />
                     </ul>

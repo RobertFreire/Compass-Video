@@ -13,7 +13,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({ showModal, closeModal }) =>
     const handleClick = (e: React.MouseEvent) => {
         e.stopPropagation();
         if (e.target === e.currentTarget) {
-            closeModal(); // Fechar a modal se clicar na área escura fora do conteúdo
+            closeModal();
         }
     };
 
@@ -38,7 +38,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({ showModal, closeModal }) =>
     return (
         <div>
             {showModal && (
-                <div className='modalBackground' onClick={handleClick}>
+                <div className={style.modalBackground} onClick={handleClick}>
                     <div className={style.perfilContent} onClick={(e) => e.stopPropagation()} tabIndex={0}>
                         <div className={style['perfil-modal']}>
                             <div className={style.buttons}>
@@ -54,7 +54,7 @@ const ProfileModal: React.FC<ProfileModalProps> = ({ showModal, closeModal }) =>
                             <a href='#' className={style.edit}>Minha assinatura</a>
                             <a href='#' className={style.edit}>Minha conta</a>
                             <a href='#' className={style.edit}>Ajuda</a>
-                            <a href='#' className={style.edit}>Sair</a>
+                            <a href='/login' className={style.edit}>Sair</a>
                         </div>
                     </div>
                 </div>
