@@ -11,6 +11,7 @@ const Home = () => {
       <Header />
       <MovieInfo location="movie"/>
       <Carrosel title="Em alta" />
+      <Carrosel title="Documentarios" />
       <Footer />
     </>
   );
