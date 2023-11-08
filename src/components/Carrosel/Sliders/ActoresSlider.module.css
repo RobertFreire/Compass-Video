@@ -1,0 +1,19 @@
+.Actors-carrosel {
+    padding: 20px 20px;
+    overflow: hidden;
+}
+.Actors-carrosel h1{
+    margin: 20px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.Actors-image{
+    display: flex;
+    align-items: center;
+}
+
+.Actor-photo{
+    width: 200px;
+    height: 300px;
+}
