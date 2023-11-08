@@ -2,7 +2,7 @@
 
 - This project is a web application that shows movies and tv series and their most important information using the TMDB API (like a streaming service!).
 - The project was developed as a challenge during the Compass internship.
---   
+  
 ## Dependencies
 - NodeJs ^18.17.0
 - React ^18.2.0
