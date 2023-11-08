@@ -1,8 +1,7 @@
 import Header from "../../components/Header/Header";
 import Carrosel from "../../components/Carrosel/Carrosel";
 import MovieInfo from "../../components/MovieInfo/MovieInfo";
-import Footer from "../../components/footer/Footer";
-import React from "react";
+import Footer from "../../components/Footer/Footer";
 
 function Tv() {
 

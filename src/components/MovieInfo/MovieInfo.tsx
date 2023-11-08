@@ -1,7 +1,6 @@
-import React, { memo, useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 import styles from "../Home/Home.module.css";
 import Overlay from '../MainDetails/Overlay/Overlay'
-import Details from '../MainDetails/Details/Details'
 import ButtonsMain from '../MainDetails/ButtonsMain/ButtonsMain';
 import { categories, getDetails } from '../../shared/api';
 import { Movie, parseMovie, TVSeries, parseTVSeries} from '../../shared/information';
@@ -20,12 +19,13 @@ const MovieInfo = memo(({ location, MediaId }: { location: string; MediaId?: str
     setCategory(category)
   }
 
-  const locationPath = () => {
+  const locationPath = async () => {
     if (MediaId) {
       setIdMovie(() => { return MediaId })
     }else{
-      const random = Math.floor(Math.random() * filterCategory!.fetchData.results.length);
-      setIdMovie(() => { return filterCategory!.fetchData.results[random].id });
+      const data = await filterCategory!.fetchData;
+      const random = Math.floor(Math.random() * data.results.length);
+      setIdMovie(() => { return data.results[random].id });
     }
   }
 
@@ -67,6 +67,7 @@ const MovieInfo = memo(({ location, MediaId }: { location: string; MediaId?: str
           
           <Overlay>
             <div className={styles.information}>
+           
             {location === 'movie' ? (
                   <MovieDetails movie={details as Movie} />
                 ) : (

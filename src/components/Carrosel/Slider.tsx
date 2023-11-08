@@ -1,12 +1,10 @@
-import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import './Slider.css'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import config from '../../shared/constant.ts';
-import { Navigate, useNavigate } from 'react-router-dom';
-import { getDetails } from '../../shared/api.ts';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -51,12 +49,12 @@ const Slider = ({ category, similar, location }: { category: any, similar?: bool
                     }}>
 
                     {similar == true
-                        ? category.results.map((similar : any) => (
+                        ? category!.results!.map((similar : any) => (
                             <SwiperSlide key={similar.id} onClick={() => navigateLocation({ type: location , id: similar.id })}>
                                 <img src={`${config.IMAGE_URL}${similar.poster_path}`} alt={similar.title} />
                             </SwiperSlide>
                         ))
-                        : category.fetchData.results.map((movie: any) => (
+                        : category!.fetchData!.results!.map((movie: any) => (
                             <SwiperSlide key={movie.id} onClick={() => navigateLocation({ type: movie.media_type, id: movie.id })}>
                                 <img src={`${config.IMAGE_URL}${movie.poster_path}`} alt={movie.title} />
                             </SwiperSlide>

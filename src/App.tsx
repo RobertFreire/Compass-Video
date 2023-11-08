@@ -1,5 +1,4 @@
 import './App.css'
-import React from 'react'
 import Login from './pages/Login/Login'
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PrivateRoute from './components/routeManage/PrivateRoute';
@@ -11,6 +10,9 @@ import Tv from './pages/Tv/Tv';
 import MovieId from './pages/Movies/MoviesId/MovieId';
 import TvId from './pages/Tv/TvId/TvId';
 import TvSeason from './pages/Tv/TvId/TvSeason/TvSeason';
+import Actors from './pages/Actors/Actors';
+import Search from './pages/Search/Search';
+import Colletions from './pages/Collections/Colletions';
 function App() {
 
 
@@ -27,6 +29,9 @@ function App() {
                 <Route element={<Tv/>} path="/tv" />
                 <Route element={<TvId/>} path="/tv/:id" />
                 <Route element={<TvSeason/>} path="/tv/:id/:season_number" />
+                <Route element={<Actors/>} path="/actors" />
+                <Route element={<Search/>} path="/search" />
+                <Route element={<Colletions/>} path="/collection/:id" />
             </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/callback" element={<Callback />} />

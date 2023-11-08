@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import Header from '../../../components/Header/Header';
 import MovieInfo from '../../../components/MovieInfo/MovieInfo';
-import Footer from '../../../components/footer/Footer';
+import Footer from '../../../components/Footer/Footer';
 import { getSimilar } from '../../../shared/api';
 import Carrosel from '../../../components/Carrosel/Carrosel';
 

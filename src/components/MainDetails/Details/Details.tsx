@@ -1,7 +1,4 @@
-import React from 'react'
 import styles from './Details.module.css'
-
-
 
 const Details = ({title, year, duration, genre, description}: { title?: string, year?: string , duration?: string , genre?: string , description?: string }) => {
     return (

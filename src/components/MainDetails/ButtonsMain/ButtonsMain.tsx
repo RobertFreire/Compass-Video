@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './ButtonsMain.module.css';
 import CustomBtn from '../../Buttons/CustomBtn/CustomBtn'
 import PlusBtn from '../../Buttons/PlusBtn/PlusBtn'

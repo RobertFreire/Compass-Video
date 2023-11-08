@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { categories } from '../../shared/api.ts';
 import Slider from './Slider.tsx';
 import './Slider.css'

@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { getSeason } from '../../../../shared/api';
-import Footer from '../../../../components/footer/Footer';
+import Footer from '../../../../components/Footer/Footer';
 import Header from '../../../../components/Header/Header';
-import MovieInfo from '../../../../components/MovieInfo/MovieInfo';
 import SeasonInfo from '../../../../components/MovieInfo/SeasonInfo';
 import { Season, parseSeason } from '../../../../shared/information';
-import SeriesPage from '../../../../Components/EpisodeList/SeriesPage';
+import SeriesPage from '../../../../components/EpisodeList/SeriesPage';
 
 const TvSeason = () => {
   const { id, season_number } = useParams();
@@ -33,7 +32,7 @@ const TvSeason = () => {
       {season &&
         <SeasonInfo season={season} />}
         <h1 style={{color: 'white', padding: '20px 20px'}}> Episodios</h1>
-      <SeriesPage seriesId={id} seasonNumber={season_number}/>
+      <SeriesPage seriesId={id!} seasonNumber={season_number!}/>
       <Footer />
     </>
   )

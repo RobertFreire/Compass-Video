@@ -1,4 +1,4 @@
-import React, { useEffect} from 'react';
+import { useEffect} from 'react';
 import { createSession } from './ApiAuth';
 import Loading from '../../shared/Ui/loading/Loading';
 import { useNavigate } from "react-router-dom";
@@ -19,6 +19,7 @@ const Callback = () => {
                 try {
                     console.log('Request Token' + requestToken)
                     const SessionId = await createSession(requestToken);
+                    console.log(SessionId)
                     localStorage.setItem('session', SessionId);
                     setAuthenticated(true);
                     getUserInfo(SessionId);

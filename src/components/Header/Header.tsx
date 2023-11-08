@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import style from './Header.module.css';
 import logo from '../../assets/Images/logo_footer.png';
 import house from '../../assets/Images/house.png';
@@ -14,13 +14,12 @@ import SearchModal from './ModalSearch';
 import ProfileModal from './ProfileModal';
 
 
+
 const Header = () => {
     const location = useLocation();
     const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
     const [isSearchVisible, setIsSearchVisible] = useState(true);
     const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
-
-    console.log(location);
 
     const handleSearchModalOpen = () => {
         setIsSearchModalOpen(true);

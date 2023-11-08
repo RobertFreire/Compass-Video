@@ -1,7 +1,6 @@
 import styles from "./Login.module.css";
 import Logo from '../../assets/Images/compass.uol_Negativo 1.png'
 import BlueButton from "../../shared/Ui/buttonLogin/BlueButton";
-import { useEffect } from "react";
 import { useUser } from "../../components/auth/UserContext";
 
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import EpisodeList from "./EpisodeList";
 import { getSeason } from "../../shared/api";
 import style from './SeriesPage.module.css'
 import config from "../../shared/constant";
+import EpisodeList from "./EpisodeList";
 
 interface EpisodeFromAPI {
   id?: number;
