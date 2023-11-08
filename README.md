@@ -9,7 +9,10 @@
 - swiper ^11.0.3
 
 ## How to run:
+To run the project locally you need to install all Dependencies: 
 ```npm install```
+And start the server: 
+```npm run dev```
 
 ## Developers
 
