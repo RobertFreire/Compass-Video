@@ -1,7 +1,10 @@
 import "./SeeNow.css";
-function SeeNow() {
+function SeeNow({ onClick }: { onClick: () => void }) {
+
+
+
   return (
-    <button className="SeeNow">
+    <button onClick={onClick} className="SeeNow">
       {" "}
       <svg
         width="24"

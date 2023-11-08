@@ -2,9 +2,10 @@ import { memo, useEffect, useState } from 'react'
 import styles from "../Home/Home.module.css";
 import Overlay from '../MainDetails/Overlay/Overlay'
 import ButtonsMain from '../MainDetails/ButtonsMain/ButtonsMain';
-import { categories, getDetails } from '../../shared/api';
+import { categories, getDetails, getVideo } from '../../shared/api';
 import { Movie, parseMovie, TVSeries, parseTVSeries} from '../../shared/information';
 import { MovieDetails, TVSeriesDetails } from './DetailsMedia';
+import { useNavigate } from 'react-router-dom';
 
 
 const MovieInfo = memo(({ location, MediaId }: { location: string; MediaId?: string }) => {
@@ -12,6 +13,8 @@ const MovieInfo = memo(({ location, MediaId }: { location: string; MediaId?: str
   const [category, setCategory] = useState<typeof categories>(categories);
   const [idMovie, setIdMovie] = useState<string>('');
   const [details, setDetails] = useState<Movie | TVSeries | null>(null);
+  const [video, setVideo] = useState();
+  const navigate = useNavigate();
   const filterCategory = category.find((item) => item.mediaType === location);
 
   const Load = async () => {
@@ -45,6 +48,24 @@ const MovieInfo = memo(({ location, MediaId }: { location: string; MediaId?: str
     }
   };
 
+  const fetchVideo =async () => {
+    try {
+      const video = await getVideo(location, idMovie);
+      setVideo(video.results);
+    } catch (error) {
+      console.error("Error to get Video", error);
+    }
+  }
+
+  const handleClick = () => {
+   if (video ) {
+    const firstVideo = video[0] as { key: string } | undefined;;
+    if (firstVideo && firstVideo.key) {
+      navigate(`/player/${firstVideo.key}`, { state: { idMovie, location} });
+    }
+   }
+  }
+
   useEffect(() => {
     Load();
   }, []);
@@ -56,10 +77,13 @@ const MovieInfo = memo(({ location, MediaId }: { location: string; MediaId?: str
   
   useEffect(() => {
     fetchDetails();
+    fetchVideo();
   }, [idMovie]);
 
 
+
   if (details) {
+  console.log(details)
   return (
     <section className={styles.home}>
       <div className={styles.content} style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original/${details.backdrop_path})`}}>
@@ -73,7 +97,7 @@ const MovieInfo = memo(({ location, MediaId }: { location: string; MediaId?: str
                 ) : (
                   <TVSeriesDetails tvSeries={details as TVSeries} />
                 )}
-              <ButtonsMain trailer={!!MediaId}/>
+              <ButtonsMain trailer={!!MediaId} onSeeNowClick={handleClick}/>
             </div>
           </Overlay>
         </div>

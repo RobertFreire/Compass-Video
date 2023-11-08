@@ -13,6 +13,7 @@ import TvSeason from './pages/Tv/TvId/TvSeason/TvSeason';
 import Actors from './pages/Actors/Actors';
 import Search from './pages/Search/Search';
 import Colletions from './pages/Collections/Colletions';
+import Player from './components/Player/Player';
 function App() {
 
 
@@ -32,6 +33,7 @@ function App() {
                 <Route element={<Actors/>} path="/actors" />
                 <Route element={<Search/>} path="/search" />
                 <Route element={<Colletions/>} path="/collection/:id" />
+                <Route element={<Player/>} path="/player/:key" />
             </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/callback" element={<Callback />} />

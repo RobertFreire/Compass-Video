@@ -5,10 +5,10 @@ import FavBtn from '../../Buttons/FavBtn/FavBtn'
 import SeeNow from '../../Buttons/see-now/SeeNow'
 
 
-const ButtonsMain = ({ trailer }: { trailer?: boolean }) => {
+const ButtonsMain = ({ trailer, onSeeNowClick }: { trailer?: boolean, onSeeNowClick: () => void }) => {
     return (
         <div className={styles.buttons}>
-            <SeeNow />
+            <SeeNow onClick={onSeeNowClick} />
             <CustomBtn trailer={trailer} />
             <div className={styles.circlesButtons}>
             <PlusBtn />

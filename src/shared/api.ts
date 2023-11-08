@@ -67,7 +67,12 @@ export const getSearch = async (type: string, query: string) => {
 }
 
 export const getColletions = async (collection_id: string | number) => {
-  const path = `//collection/1241?&api_key=${config.API_KEY}&language=pt-BR`
+  const path = `/collection/1241?&api_key=${config.API_KEY}&language=pt-BR`
+  return fetchData(path);
+}
+
+export const getVideo = async (type: string, id: string) => {
+  const path = `/${type}/${id}/videos?&api_key=${config.API_KEY}&language=pt-BR`
   return fetchData(path);
 }
 
