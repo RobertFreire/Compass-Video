@@ -8,6 +8,10 @@ import pStyles from '../MainDetails/Details/Details.module.css'
 
 const MovieInfo = memo(({season }: {season: Season}) => {
 
+  const handleSeeNowClick = () => {
+    console.log('See Now button clicked');
+  };
+
   if (season) {
   return (
     <section className={styles.home}>
@@ -15,8 +19,8 @@ const MovieInfo = memo(({season }: {season: Season}) => {
         <div className={styles.main}>
           <Overlay>
             <div className={styles.information}>
-            <SeasonDetails season={season as Season} />
-              <ButtonsMain trailer/>
+            <SeasonDetails season={season as Season}  />
+              <ButtonsMain trailer onSeeNowClick={handleSeeNowClick}/>
               <p className={pStyles.description}>{window.innerWidth >= 768 ? season.overview : season.overview.slice(0, 200) + '...'}</p>
             </div>
           </Overlay>
