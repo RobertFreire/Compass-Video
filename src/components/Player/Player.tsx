@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import style from './Player.module.css';
 import back from '../../assets/Images/arrow_back_ios.png';
 import { useLocation, useParams } from 'react-router-dom';
