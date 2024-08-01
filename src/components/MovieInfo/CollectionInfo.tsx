@@ -1,10 +1,8 @@
 import { memo } from 'react'
 import styles from "../Home/Home.module.css";
 import Overlay from '../MainDetails/Overlay/Overlay'
-import ButtonsMain from '../MainDetails/ButtonsMain/ButtonsMain';
-import { Collection, Season} from '../../shared/information';
-import { CollectionsDetails, SeasonDetails } from './DetailsMedia';
-import pStyles from '../MainDetails/Details/Details.module.css'
+import { Collection} from '../../shared/information';
+import { CollectionsDetails } from './DetailsMedia';
 
 const CollectionInfo = memo(({collection }: {collection: Collection}) => {
 

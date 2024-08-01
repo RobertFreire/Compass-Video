@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from '../../components/Header/Header'
 import { useParams } from 'react-router-dom';
-import { Collection, parseCollection, CollectionPart } from '../../shared/information';
-import { getColletions, getDetails } from '../../shared/api';
+import { Collection, parseCollection } from '../../shared/information';
+import { getColletions } from '../../shared/api';
 import CollectionInfo from '../../components/MovieInfo/CollectionInfo';
 import Footer from '../../components/Footer/Footer';
 import SearchSlider from '../../components/Carrosel/Sliders/SearchSlider';

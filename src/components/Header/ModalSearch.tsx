@@ -3,8 +3,7 @@ import style from './Header.module.css';
 import lupa from '../../assets/Images/lupa.png';
 import close from '../../assets/Images/close.png';
 import { getSearch } from '../../shared/api';
-import { Navigate, useNavigate } from 'react-router-dom';
-import Search from '../../pages/Search/Search';
+import { useNavigate } from 'react-router-dom';
 
 interface SearchModalProps {
     showModal: boolean;
